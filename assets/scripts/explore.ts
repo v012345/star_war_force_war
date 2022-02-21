@@ -21,7 +21,9 @@ export default class NewClass extends cc.Component {
     // onLoad () {}
 
     start() {
-
+        if (!window.scence) {
+            cc.director.loadScene("login")
+        }
     }
     back() {
         if (window.scence) {
