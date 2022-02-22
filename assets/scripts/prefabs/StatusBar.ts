@@ -10,34 +10,24 @@ const { ccclass, property } = cc._decorator;
 @ccclass
 export default class NewClass extends cc.Component {
 
-    // @property(cc.Label)
-    // label: cc.Label = null;
+    @property(cc.Label)
+    label: cc.Label = null;
 
-    // @property
-    // text: string = 'hello';
+    @property
+    text: string = 'hello';
 
     // LIFE-CYCLE CALLBACKS:
 
     // onLoad () {}
 
     start() {
-        if (!window.scence) {
-            cc.director.loadScene("login")
+        if (window.my) {
+            // console.log(window.my)
+            console.log()
+            this.node.getChildByName("Power").getComponentInChildren(cc.Label).string = window.my.power.toString();
+            this.node.getChildByName("Currency").getComponentInChildren(cc.Label).string = window.my.currency.toString();
         }
     }
-    back() {
-        if (window.scence) {
-            window.scence.pop();
-            cc.director.loadScene(window.scence[window.scence.length - 1]);
-        } else {
-            cc.director.loadScene("login");
-        }
-    }
-    chooseHero() {
-        window.scence.push("heroes");
-        cc.director.loadScene("heroes")
-    }
-
 
     // update (dt) {}
 }

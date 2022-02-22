@@ -7,8 +7,14 @@
 
 const { ccclass, property } = cc._decorator;
 import axios from "axios";
+interface my {
+    id: number,
+    name: string,
+    power: number,
+    currency: number
+}
 declare global {
-    interface Window { scence: Array<string>; }
+    interface Window { scence: Array<string>; my: my }
 }
 
 @ccclass
@@ -35,7 +41,7 @@ export default class NewClass extends cc.Component {
         if (this.account.string && !this.isLogingin) {
             this.isLogingin = true
             axios.post("http://api.nightowl.name/api/user/login").then(r => {
-                // console.log(r.data)
+                window.my = r.data;
                 window.scence.push("hall");
                 cc.director.loadScene("hall");
             })
@@ -45,6 +51,7 @@ export default class NewClass extends cc.Component {
 
     start(): void {
         window.scence = [];
+
         // console.log(this);
         // axios.post("http://api.nightowl.name/api/user/login").then(r => {
         //     console.log(r.data)

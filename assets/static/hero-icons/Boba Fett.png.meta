@@ -1,0 +1,38 @@
+{
+  "ver": "2.3.7",
+  "uuid": "1f116a06-d713-4838-851c-7817db6c6537",
+  "importer": "texture",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 193,
+  "height": 202,
+  "platformSettings": {},
+  "subMetas": {
+    "Boba Fett": {
+      "ver": "1.0.6",
+      "uuid": "795881bf-5935-4d74-9548-f627f5d1d025",
+      "importer": "sprite-frame",
+      "rawTextureUuid": "1f116a06-d713-4838-851c-7817db6c6537",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 1.5,
+      "offsetY": 0,
+      "trimX": 4,
+      "trimY": 4,
+      "width": 188,
+      "height": 194,
+      "rawWidth": 193,
+      "rawHeight": 202,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
